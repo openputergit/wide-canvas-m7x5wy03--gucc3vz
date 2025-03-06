@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCrafts Share Market Classes</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            cursor: none;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1470&auto=format&fit=crop') center/cover;
+        }
+        .expert-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="custom-cursor" class="custom-cursor bg-green-500"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-2xl font-bold text-gray-800">TradeCrafts</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#courses" class="text-gray-600 hover:text-blue-600">Courses</a>
+                    <a href="#success" class="text-gray-600 hover:text-blue-600">Success Stories</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center text-white pt-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">TradeCrafts Share Market Classes</h1>
+            <p class="text-xl md:text-2xl mb-8">Empowering You to Master the Stock Market</p>
+            <a href="#courses" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                Join Now
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">About Us</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16 text-center">
+                Welcome to TradeCrafts Share Market Classes, where we empower individuals to master the art of trading and investing. Our expert team blends technical expertise with practical experience, guiding you to achieve financial freedom through stock market education.
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="expert-card bg-white rounded-lg shadow-lg p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200" alt="Expert" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-bold text-xl mb-2">Vaibhav Rananavare (MBA)</h3>
+                    <p class="text-gray-600">Stock Market Educator</p>
+                </div>
+                <!-- Repeat for other experts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Our Courses</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-4">Basic Course</h3>
+                    <p class="text-gray-600 mb-4">Stock Market Foundation for beginners</p>
+                    <p class="text-3xl font-bold mb-6">₹12,000</p>
+                    <button onclick="handlePayment('basic')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full w-full">
+                        Enroll Now
+                    </button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-4">Basic + Advanced Course</h3>
+                    <p class="text-gray-600 mb-4">Professional Trader Course</p>
+                    <p class="text-3xl font-bold mb-6">₹19,999</p>
+                    <button onclick="handlePayment('advanced')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full w-full">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="success" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Success Stories</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Success story cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <p class="mb-2"><i class="bi bi-telephone-fill mr-2"></i> 995576020 / 9850690303</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill mr-2"></i> Tradecraftsharemarketinstitute@gmail.com</p>
+                    <p class="mb-4"><i class="bi bi-geo-alt-fill mr-2"></i> Office no 306 3rd floor, crystal fortune, near Old orbis school, lonakr chowk, Mundhwa, Pune, Maharashtra 411036</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/tradecrafts_institute" target="_blank" class="text-2xl text-gray-600 hover:text-blue-600">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="text-2xl text-gray-600 hover:text-green-600">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613267110847!2d73.91411231489322!3d18.54644398738454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sMundhwa%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645548762374!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Join our free WhatsApp group for daily updates</p>
+            <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">
+                Join WhatsApp Group
+            </a>
+            <p class="mt-8">&copy; 2024 TradeCrafts Share Market Classes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const cursor = document.getElementById('custom-cursor');
+        let lastScrollTop = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        window.addEventListener('scroll', () => {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            cursor.style.backgroundColor = st > lastScrollTop ? '#ef4444' : '#22c55e';
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+
+        // Payment handling
+        function handlePayment(course) {
+            const amounts = {
+                'basic': 12000,
+                'advanced': 19999
+            };
+            alert(`Redirecting to payment gateway for ${course} course. Amount: ₹${amounts[course]}`);
+            // Implement actual payment gateway integration here
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
